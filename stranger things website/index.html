@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A cinematic Stranger Things inspired scroll-driven website experience">
+    <title>Stranger Things | The Upside Down</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ==================== FIXED OVERLAYS ==================== -->
+    <!-- Vignette - red glow around edges -->
+    <div class="vignette" id="vignette"></div>
+
+    <!-- Scanlines overlay (for glitch effect) -->
+    <div class="scanlines" id="scanlines"></div>
+
+    <!-- Static noise overlay -->
+    <div class="static-noise" id="staticNoise"></div>
+
+    <!-- Red fog background -->
+    <div class="fog-container" id="fogContainer">
+        <div class="fog fog-1"></div>
+        <div class="fog fog-2"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-container" id="mainContainer">
+
+        <!-- ===== SECTION 1: HERO - FULL SCREEN ===== -->
+        <section class="hero-section" id="heroSection">
+            <!-- Red glow behind logo -->
+            <div class="logo-glow" id="logoGlow"></div>
+
+            <!-- Logo with glitch effect -->
+            <div class="logo-wrapper" id="logoWrapper">
+                <img src="assets/stranger-things-logo.png" alt="Stranger Things" class="logo" id="logo">
+                <!-- Glitch layers for RGB split effect -->
+                <img src="assets/stranger-things-logo.png" alt="" class="logo logo-glitch logo-glitch-r"
+                    aria-hidden="true">
+                <img src="assets/stranger-things-logo.png" alt="" class="logo logo-glitch logo-glitch-c"
+                    aria-hidden="true">
+            </div>
+
+            <!-- Horizontal glitch slices overlay -->
+            <div class="glitch-slices" id="glitchSlices"></div>
+
+            <!-- Scroll prompt -->
+            <div class="scroll-prompt" id="scrollPrompt">
+                <span class="scroll-text">SCROLL TO ENTER</span>
+                <div class="scroll-arrow">
+                    <span>▼</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: ABOUT THE WORLD ===== -->
+        <section class="section about-section" id="aboutSection">
+            <div class="section-content">
+                <div class="story-container">
+                    <p class="story-line" data-delay="0">
+                        <span class="word">A</span>
+                        <span class="word">small</span>
+                        <span class="word highlight">town.</span>
+                    </p>
+                    <p class="story-line" data-delay="200">
+                        <span class="word">A</span>
+                        <span class="word">dark</span>
+                        <span class="word highlight">mirror</span>
+                        <span class="word">world.</span>
+                    </p>
+                    <p class="story-line" data-delay="400">
+                        <span class="word">Something</span>
+                        <span class="word">is</span>
+                        <span class="word highlight">watching.</span>
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card" data-delay="600">
+                        <div class="feature-icon">◇</div>
+                        <h3>Mystery</h3>
+                        <p>Secrets lurk in the shadows of Hawkins</p>
+                    </div>
+                    <div class="feature-card" data-delay="800">
+                        <div class="feature-icon">⬡</div>
+                        <h3>Parallel Dimension</h3>
+                        <p>The Upside Down mirrors our reality</p>
+                    </div>
+                    <div class="feature-card" data-delay="1000">
+                        <div class="feature-icon">◈</div>
+                        <h3>Supernatural Forces</h3>
+                        <p>Powers beyond human understanding</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: CHARACTERS ===== -->
+        <section class="section characters-section" id="charactersSection">
+            <div class="section-content">
+                <h2 class="section-title">THE DARKNESS AWAKENS</h2>
+
+                <div class="character-list">
+                    <div class="character-item" data-delay="0">
+                        <span class="character-name">ELEVEN</span>
+                    </div>
+                    <div class="character-item" data-delay="200">
+                        <span class="character-name">DEMOGORGON</span>
+                    </div>
+                    <div class="character-item" data-delay="400">
+                        <span class="character-name">MIND FLAYER</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: ALPHABET WALL ===== -->
+        <section class="section alphabet-section" id="alphabetSection">
+            <div class="section-content">
+                <h2 class="section-title">THE WALL SPEAKS</h2>
+                <div class="alphabet-wall" id="alphabetWall"></div>
+                <div class="message-display" id="messageDisplay"></div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: UPSIDE DOWN ===== -->
+        <section class="section upside-down-section" id="upsideDownSection">
+            <div class="section-content">
+                <h2 class="section-title glitch-text" data-text="ENTERING THE UPSIDE DOWN">
+                    ENTERING THE UPSIDE DOWN
+                </h2>
+                <p class="warning-text">You shouldn't be here...</p>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: PORTAL ===== -->
+        <section class="section portal-section" id="portalSection">
+            <div class="portal-container" id="portalContainer">
+                <div class="portal-crack" id="portalCrack">
+                    <div class="crack-line crack-1"></div>
+                    <div class="crack-line crack-2"></div>
+                    <div class="crack-line crack-3"></div>
+                    <div class="crack-line crack-4"></div>
+                    <div class="crack-line crack-5"></div>
+                </div>
+                <div class="portal-glow" id="portalGlow"></div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: ENDING ===== -->
+        <section class="section ending-section" id="endingSection">
+            <div class="section-content">
+                <div class="credits" id="credits">
+                    <p class="credits-text">MADE WITH</p>
+                    <p class="credits-tech">HTML • CSS • JS</p>
+                    <div class="credits-line"></div>
+                    <p class="credits-subtitle">A Stranger Things Tribute</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Upside Down Toggle Button -->
+    <button class="toggle-btn" id="toggleBtn" title="Toggle Upside Down (U)">
+        <span>⬡</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
